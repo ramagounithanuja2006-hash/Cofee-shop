@@ -1,0 +1,9 @@
+<article class="cart-item">
+  <img src="{{IMAGE}}" alt="{{NAME}}">
+  <div class="item-info">
+    <small>{{CATEGORY}}</small><h3>{{NAME}}</h3><p>{{DESCRIPTION}}</p><b>₹{{PRICE}}</b>
+  </div>
+  <div class="qty"><button onclick="changeQty({{ID}},-1)">−</button><span>{{QTY}}</span><button onclick="changeQty({{ID}},1)">+</button></div>
+  <strong class="item-total">₹{{ITEMTOTAL}}</strong>
+  <button class="remove" onclick="removeItem({{ID}})">×</button>
+</article>

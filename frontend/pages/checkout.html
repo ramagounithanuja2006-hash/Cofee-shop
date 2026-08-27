@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brew Haven | Checkout</title>
+<link rel="stylesheet" href="../css/checkout.css">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="../index.html"><span class="brand-cup">☕</span><span>Brew Haven</span></a>
+  <nav><a href="../index.html">Home</a><a href="#">Menu</a><a href="#">Offers</a><a href="#">Gallery</a><a href="#">Outlets</a></nav>
+  <button class="back" onclick="location.href='cart.html'">← Cart</button>
+</header>
+
+<section class="checkout-hero">
+ <div><div class="eyebrow">BREW HAVEN</div><h1>Complete Your <em>Order</em></h1><p>Complete your order by providing your details and selecting your preferred payment method.</p></div>
+ <div class="steps"><div class="step done"><i>1</i><span>Cart</span></div><div class="step active"><i>2</i><span>Checkout</span></div><div class="step"><i>3</i><span>Confirmation</span></div></div>
+</section>
+
+<main class="checkout-layout">
+<section>
+ <div class="form-card">
+  <div class="heading"><b>1</b><div><h2>Delivery Information</h2><p>Please provide your delivery details.</p></div></div>
+  <div class="grid">
+   <label>First Name *<input id="firstName" placeholder="Enter first name"></label><label>Last Name *<input id="lastName" placeholder="Enter last name"></label>
+   <label>Phone Number *<input id="phone" placeholder="10-digit mobile number"></label><label>Email *<input id="email" placeholder="example@gmail.com"></label>
+   <label class="full">Address *<textarea id="address" placeholder="House number, street, area"></textarea></label>
+   <label>City *<input id="city" placeholder="City"></label><label>Pincode *<input id="pincode" placeholder="6-digit pincode"></label>
+  </div>
+ </div>
+ <div class="form-card">
+  <div class="heading"><b>2</b><div><h2>Payment Method</h2><p>Choose how you want to pay.</p></div></div>
+  <div class="payments">
+   <label><input type="radio" name="payment" value="UPI" checked><strong>📱　UPI</strong><span>Google Pay, PhonePe, Paytm</span><em>G Pay　◉ Paytm</em></label>
+   <label><input type="radio" name="payment" value="Card"><strong>💳　Credit / Debit Card</strong><span>Visa, Mastercard, RuPay</span><em>VISA　● ●</em></label>
+   <label><input type="radio" name="payment" value="COD"><strong>💵　Cash on Delivery</strong><span>Pay when your coffee arrives</span><em>▣</em></label>
+  </div>
+ </div>
+ <div class="form-card">
+  <div class="heading"><b>3</b><div><h2>Order Notes <small>(Optional)</small></h2><p>Anything special we should know?</p></div></div>
+  <textarea id="notes" class="notes" placeholder="Example: Less sugar, extra hot..."></textarea>
+ </div>
+</section>
+
+<aside class="order-card">
+ <h2>Your Order</h2><div id="items"></div><div class="line"></div>
+ <div class="row"><span>Subtotal</span><strong id="sub"></strong></div><div class="row"><span>Delivery</span><strong>₹40.00</strong></div><div class="row discount"><span>Discount (BREW10)</span><strong id="dis"></strong></div>
+ <div class="line"></div><div class="total"><span>Total</span><strong id="total"></strong></div>
+ <button class="primary-btn" onclick="placeOrder()">Place Order <span>→</span></button><div class="secure">♙ Your payment is secure and encrypted.</div>
+ <div class="passion"><h3>Brewed with<br><em>Passion,</em><br>Served with Love.</h3><div>☕</div></div>
+</aside>
+</main>
+
+<div id="modal" class="modal"><div><div class="check">✓</div><h2>Order Placed!</h2><p>Your coffee is being prepared with love.</p><b id="orderNo"></b><button onclick="location.href='../index.html'">Continue Shopping</button></div></div>
+<script src="../js/checkout.js"></script>
+</body>
+</html>

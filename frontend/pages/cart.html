@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brew Haven | Shopping Cart</title>
+<link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="../index.html"><span class="brand-cup">☕</span><span>Brew Haven</span></a>
+  <nav>
+    <a href="../index.html">Home</a><a href="#">Menu</a><a href="#">Offers</a><a href="#">Gallery</a><a href="#">Outlets</a>
+  </nav>
+  <div class="nav-icons"><button>⌕</button><button>♡</button><button class="cart-icon" onclick="location.href='cart.html'">🛒<b id="cartCount">3</b></button><button>♙</button></div>
+</header>
+
+<section class="hero cart-hero">
+  <div>
+    <div class="eyebrow">BREW HAVEN</div>
+    <h1>Your <em>Shopping Cart</em></h1>
+    <p>Review your favorite coffees and delicious treats before placing your order.</p>
+  </div>
+  <div class="hero-coffee"><div class="cup">☕</div><div class="beans"></div></div>
+</section>
+
+<main class="cart-layout">
+  <section class="cart-panel">
+    <div class="panel-title"><div><h2>Your Cart <span id="itemCount">(3 items)</span></h2><p>Freshly selected for you</p></div><button class="outline-btn" onclick="clearCart()">♧ Clear Cart</button></div>
+    <div id="cartItems"></div>
+    <a class="continue" href="../index.html">← Continue Shopping</a>
+  </section>
+
+  <aside class="summary panel">
+    <h2>Order Summary</h2>
+    <div class="row"><span>Subtotal</span><strong id="subtotal">₹780.00</strong></div>
+    <div class="row"><span>Delivery</span><strong>₹40.00</strong></div>
+    <div class="row discount"><span>Discount</span><strong id="discount">- ₹78.00</strong></div>
+    <div class="coupon"><input id="coupon" placeholder="Enter coupon code"><button onclick="applyCoupon()">Apply</button></div>
+    <p id="couponMsg" class="coupon-msg">✓ Coupon applied! You saved 10%.</p>
+    <div class="gold-line"></div>
+    <div class="total"><span>Total</span><strong id="total">₹742.00</strong></div>
+    <button class="primary-btn" onclick="goCheckout()">Proceed to Checkout <span>→</span></button>
+    <div class="secure">♙ Secure &amp; Safe Payment</div>
+  </aside>
+</main>
+
+<section class="benefits">
+  <div><span>🚚</span><article><b>Fast Delivery</b><small>Fresh coffee delivered to your door.</small></article></div>
+  <div><span>☕</span><article><b>Freshly Brewed</b><small>Premium quality coffee every time.</small></article></div>
+  <div><span>♢</span><article><b>Secure Payment</b><small>Your payment information is protected.</small></article></div>
+</section>
+
+<footer><div class="footer-brand">☕ Brew Haven</div><p>Brewed with passion, served with love.</p><div class="social">●　◎　●</div><small>© 2026 Brew Haven. All rights reserved.</small></footer>
+<script src="../js/cart.js"></script>
+</body>
+</html>
